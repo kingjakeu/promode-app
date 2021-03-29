@@ -62,42 +62,6 @@ class App extends Component{
   render(){
     return (
       <div className="App">
-
-        <div class="side-info-bar">
-          asds
-        </div>
-         <div class="main-hot-issue">
-          <Subject
-            title={this.state.subject.title} 
-            sub={this.state.subject.sub}
-            onChangePage={function(){
-                this.setState({mode: 'welcome'});
-            }.bind(this)}
-          >
-          </Subject>
-          <Toc onChangePage={function(id){
-              this.setState({
-                  mode: 'read',
-                  select_content_id: Number(id)
-              });
-          }.bind(this)} 
-          data={this.state.contents}>
-          </Toc>
-          <Control onChangeMode={function(mode){
-              if(mode === 'delete'){
-                  if(window.confirm()){
-                      var _content = Array.from(this.state.contents);
-                      _content.splice(this.state.select_content_id, this.state.select_content_id+1);
-                      this.setState({contents: _content});
-                  }
-              }else {
-                  this.setState({
-                      mode: mode 
-                  });
-              }
-          }.bind(this)}></Control>
-          {this.getContent()}
-         </div>
       </div>
     );
   }

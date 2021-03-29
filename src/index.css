@@ -43,6 +43,9 @@ ul {
   align-items: center;
   flex-direction: row;
 }
+.logo-img{
+  width: 8rem;
+}
 
 .main-nav-items{
   display: flex;
@@ -73,7 +76,7 @@ ul {
   overflow: visible;
   clear: both;
 }
-#root{
+#root-tmp{
   max-width: 1376px;
   margin-left: auto;
   margin-right: auto;
@@ -84,7 +87,6 @@ ul {
 .main-hot-issue{
   background-color: rgb(60, 92, 141);
   margin-right: 32rem;
-  padding-right: 3rem;
   position: relative;
 }
 .side-info-bar{
@@ -94,4 +96,73 @@ ul {
   padding: 4rem 5rem 1rem 1rem;
   position: relative;
   z-index: 13;
+}
+
+.topic-wrapper{
+  padding: 1rem 0 1rem;
+  position: relative;
+  display: block;
+  margin-bottom: 3rem;
+}
+.topic-figure{
+  display: flex;
+  height: 100%;
+}
+#topic-desc{
+  float: left;
+  overflow: hidden;
+  position: relative;
+  width: 40%;
+  -ms-flex-preferred-size: 40%;
+  flex-basis: 40%;
+  display: block;
+  min-height: 10rem;
+  background: #ff2
+}
+.topic-title{
+  font-size: 3rem;
+  line-height: 1.21;
+  transition: .2s;
+  margin-bottom: 0;
+}
+.topic-sub-title{
+  font-size: 2rem;
+  line-height: 1.21;
+  transition: .2s;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.topic-btn{
+  width: 70%;
+  height: 3rem;
+  background-color: aquamarine;
+  border-radius: 9999px;
+  --border-opacity: 1;
+  border-color: #000;
+}
+.topic-img-wrapper{
+  overflow: hidden;
+  position: relative;
+  width: 60%;
+  -ms-flex-preferred-size: 60%;
+  flex-basis: 60%;
+  display: flex;
+  align-items: center;
+  min-height: 10rem;
+  background: rgba(22,0123,60,.9);
+  justify-content: center;
+}
+.topic-img{
+  width: 40%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: relative;
+  display: flex;
+  transition: all 2s;
+}
+.topic-img-sub{
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
