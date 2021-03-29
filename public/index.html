@@ -1,50 +1,59 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-            name="description"
-            content="jake"
-        />
-        <title>jake App</title>
-    </head>
-    <body>
-        <nav id="main-nav">
-            <div class="n-content">
-                <ul class="mobile-ul"></ul>
-                <ul class="normal-ul">
-                    <li>
-                        <a href="/">
-                            <span>item</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <nav id = "sub-nav">
-            <div class="n-sub-content">
-                <ul class="mobile-ul"></ul>
-                <ul class="normal-ul">
-                    <li>
-                        <a href="/">
-                            <span>sub-item</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="chap-paddle">
-                <button></button>
-            </div>
-        </nav>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+        name="description"
+        content="jake"
+    />
+    <title>jake App</title>
+  </head>
+  <body>
+    <nav id="main-nav">
+      <div class="nav-wrapper">
+        <div class="logo">
+          <a href="/">
+            <span>PROMODE</span>
+          </a>
+        </div>
+        <ul class="main-nav-items">
+          <li class="nav-item">
+            <a href="/match">
+              <span>경기</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/player">
+              <span>선수</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/champion">
+              <span>챔피언</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main id="main-content">
+      <div>
+        <div id="topic-desc">
+          <div>
 
-        <main>
-
-            <div id="root"></div>
-        </main>
-        
-        <footer>
-
-        </footer>
-    </body>
+          </div>
+          <div>
+            <button>바로가기</button>
+          </div>
+        </div>
+        <div id="topic-img">
+          <img src="/public/logo192.png">
+        </div>
+      </div>
+      <div id="root">
+      </div>
+    </main>
+    <footer>
+    </footer>
+  </body>
 </html>
