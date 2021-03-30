@@ -159,7 +159,6 @@ ul {
 }
 .side-content-wrapper{
   width: 100%;
-  padding: 1rem 1rem;
 }
 .of-the-week{
   margin: 0rem 1rem;
@@ -219,21 +218,29 @@ ul {
   justify-content: center;
   text-align: center;
 }
+
 .side-info-title{
-  margin-block-start: 0.67em;
-  margin-block-end: 0.67em;
+  background-color: #444;
+  padding: 1rem;
 }
+
+.side-info-title h5{
+  margin: 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
 .side-info-body{
   width: 100%;
 }
 .side-info-body th{
-  padding: 10px 6px;
+  padding: 1rem 1rem;
 }
 .side-info-body thead tr td{
   padding: 10px 6px;
 }
 .side-info-body tbody tr td{
-  padding: 8px 6px;
+  padding: 0.5rem 1rem;
   text-align: center;
   align-items: center;
 }
@@ -245,15 +252,29 @@ ul {
   width: 100%;
   border-collapse: collapse; 
 }
-.one{
+.side-info-table-cell-33{
   width: 33%;
 }
-.two{
-  width: 34%;
+.side-info-table-cell-33 h5{
+  margin: 0;
+  font-size: .95rem;
 }
-.three{
-  width: 33%;
+.side-info-table-cell-33 h6{
+  margin: 0;
 }
+.side-info-table-cell-33 img{
+  margin: 0 0 -1rem 0;
+  justify-items: center;
+}
+.side-info-bar-more-btn{
+  width: 100%;
+
+  height: 2.5rem;
+  border-width: 0;
+  background-color: #fff;
+  border-color: #000;
+}
+
 tr{
   display: table-row;
   vertical-align: inherit;
@@ -317,7 +338,7 @@ tr{
 }
 
 .card-background{
-  /* background: linear-gradient( 135deg, rgb(248,235,161), rgb(211,191,113) ); */
+  background: linear-gradient( 135deg, rgb(248,235,161), rgb(211,191,113) );
 }
 
 .side-content-wrapper{
