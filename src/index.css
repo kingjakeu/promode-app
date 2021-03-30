@@ -12,9 +12,12 @@ body {
   overflow-x: hidden;
     
 }
+
 ul {
   list-style-type: none;
 }
+
+/*Top navigation*/
 
 #main-nav {
   text-shadow: 1px 1px 1px rgb(0 0 0 / 0%);
@@ -72,59 +75,109 @@ ul {
   color: #111;
   text-decoration: none;
 }
-#main-content{
-  overflow: visible;
-  clear: both;
-}
-#root-tmp{
-  max-width: 1376px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  background-color: #242424;
-}
-.main-hot-issue{
-  background-color: rgb(60, 92, 141);
-  margin-right: 32rem;
-  position: relative;
-}
-.side-info-bar{
-  background-color: rgb(141, 60, 60);
-  float: right;
-  width: 32rem;
-  padding: 4rem 5rem 1rem 1rem;
-  position: relative;
-  z-index: 13;
+
+.main-content{
+  max-width: 1380px;
 }
 
-.topic-wrapper{
-  padding: 1rem 0 1rem;
-  position: relative;
-  display: block;
-  margin-bottom: 3rem;
+.margin-auto{
+  margin-left: auto;
+  margin-right: auto;
 }
-.topic-figure{
-  display: flex;
+
+.shadow{
+  box-shadow: 0 0 10px 0 hsl(0deg 0% 82% / 50%);
+}
+
+.font-white{
+  color: #fff;
+}
+.h100{
   height: 100%;
 }
-#topic-desc{
-  float: left;
-  overflow: hidden;
-  position: relative;
-  width: 40%;
-  -ms-flex-preferred-size: 40%;
-  flex-basis: 40%;
-  display: block;
-  min-height: 10rem;
-  background: #ff2
+@media (min-width: 1024px){
+  .content-wrapper{
+    display: flex;
+  }
+  .w100{
+    width: 100%;
+  }
+  .w70{
+    width: 70%;
+  }
+  .w30{
+    width: 30%;
+  }
 }
+@media (min-width:0px){
+  .of-the-week-head{
+    text-align: center;
+  }
+  .of-the-week-title-wrapper{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .of-the-week-img-wrapper{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 910px){
+  .of-the-week-head{
+    display: flex;
+    text-align: left;
+  }
+  .flex-table-cell{
+    display: table-cell;
+  }
+}
+
+@media (min-width: 768px){
+  .pad-1-75 {
+      padding: 1.75rem;
+  }
+}
+
+.root-tmp{
+  width: 100%;
+}
+
+.content-wrapper{
+  padding: 0 0;
+  margin: 1rem 0rem;
+}
+
+.main-topic-wrapper{
+  background: linear-gradient( to bottom, #484848, #222 );
+  display: flex;
+  margin: 1rem 1rem;
+  min-height: 23rem;
+}
+
+.side-info-bar{
+  margin: 1rem 1rem;
+}
+.side-content-wrapper{
+  width: 100%;
+  padding: 1rem 1rem;
+}
+.of-the-week{
+  margin: 0rem 1rem;
+}
+
+.topic-desc{
+  width: 40%;
+  min-height: 10rem;
+  padding: 2rem
+}
+
 .topic-title{
   font-size: 3rem;
   line-height: 1.21;
   transition: .2s;
   margin-bottom: 0;
 }
+
 .topic-sub-title{
   font-size: 2rem;
   line-height: 1.21;
@@ -132,26 +185,25 @@ ul {
   margin-top: 0;
   margin-bottom: 1rem;
 }
+
 .topic-btn{
   width: 70%;
   height: 3rem;
-  background-color: aquamarine;
   border-radius: 9999px;
   --border-opacity: 1;
+  background-color: #fff;
   border-color: #000;
 }
+
 .topic-img-wrapper{
-  overflow: hidden;
-  position: relative;
   width: 60%;
-  -ms-flex-preferred-size: 60%;
-  flex-basis: 60%;
   display: flex;
   align-items: center;
-  min-height: 10rem;
-  background: rgba(22,0123,60,.9);
   justify-content: center;
+  min-height: 10rem;
+  padding: 1.75rem 1.75rem;
 }
+
 .topic-img{
   width: 40%;
   -o-object-fit: cover;
@@ -160,9 +212,114 @@ ul {
   display: flex;
   transition: all 2s;
 }
+
 .topic-img-sub{
   width: 20%;
   display: flex;
   justify-content: center;
   text-align: center;
+}
+.side-info-title{
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+}
+.side-info-body{
+  width: 100%;
+}
+.side-info-body th{
+  padding: 10px 6px;
+}
+.side-info-body thead tr td{
+  padding: 10px 6px;
+}
+.side-info-body tbody tr td{
+  padding: 8px 6px;
+  text-align: center;
+  align-items: center;
+}
+.side-info-body tbody tr{
+  border-top: 1pt solid #e7e7e7;
+  border-bottom: 1pt solid #e7e7e7;
+}
+.side-info-body table{
+  width: 100%;
+  border-collapse: collapse; 
+}
+.one{
+  width: 33%;
+}
+.two{
+  width: 34%;
+}
+.three{
+  width: 33%;
+}
+tr{
+  display: table-row;
+  vertical-align: inherit;
+}
+
+.of-the-week h4{
+  font-size: 1.45rem;
+  margin: 1rem 0rem;
+}
+
+.best-of-week{
+  width: 100%;
+  margin: 1rem 0rem;
+  padding: 0.5rem 1rem;
+}
+.of-the-week-head{
+  width: 100%;
+  align-items: center;
+}
+
+.of-the-week-title-wrapper{
+  width: 80%;
+}
+.of-the-week-img-wrapper{
+  width: 20%;
+}
+
+.of-the-week-content{
+  width: 100%;
+}
+
+.of-the-week img{
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: relative;
+  display: flex;
+  transition: all 2s;
+}
+
+.of-the-week ul {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.flex-table-cell {
+  text-align: center;
+  border: 1px solid  #e7e7e7;
+  vertical-align: middle;
+  word-wrap: break-word;
+}
+.flex-table-cell-title{
+  border-bottom: 1pt solid #e7e7e7;
+}
+
+.of-the-week-content h5{
+  margin: 0;
+  font-size: 1.24em;
+}
+
+.card-background{
+  /* background: linear-gradient( 135deg, rgb(248,235,161), rgb(211,191,113) ); */
+}
+
+.side-content-wrapper{
+
 }
