@@ -36,7 +36,7 @@
         </ul>
       </div>
     </nav>
-    <main class="main-content margin-auto pad-1-75">
+    <main class="main-content margin-auto">
       <div class="root-tmp">
         <div class="content-wrapper w100 ">
           <div class="main-topic-wrapper w70">
@@ -54,69 +54,61 @@
               <img class="topic-img" src="img/t1.png">
             </div>
           </div>
-          <div class="side-info-bar w30">
+
+          <div class="side-info w30">
+            <div class="point-bar"> </div>
             <div class="side-content-wrapper h100 shadow">
               <div class="side-info-title">
                 <h5>경기 일정</h5>
               </div>
               <div class="side-info-body">
-                <table>
-                  <thead>
-                    <tr>
-                      <th scope="col">3.31 수</td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="side-info-table-cell-33">
-                        <img class="team-logo-img" src="img/dwg_small.png">
-                        <h6>DWG</h6>
-                      </td>
-                      <td class="side-info-table-cell-33">
-                        <h5>17:00</h5>
-                      </td>
-                      <td class="side-info-table-cell-33">
-                        <img class="team-logo-img" src="img/t1_small.png">
-                        <h6>T1</h6>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="side-info-table-cell-33">
-                        <img class="team-logo-img" src="img/dwg_small.png">
-                        <h6>DWG</h6>
-                      </td>
-                      <td class="side-info-table-cell-33">
-                        <h5>17:00</h5>
-                      </td>
-                      <td class="side-info-table-cell-33">
-                        <img class="team-logo-img" src="img/t1_small.png">
-                        <h6>T1</h6>
-                      </td>
-                    </tr>
-                  </tbody>
-                  <thead>
-                    <tr>
-                      <th scope="col">지난 경기</td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <tr>
-                        <td class="side-info-table-cell-33">
-                          <img class="team-logo-img" src="img/dwg_small.png">
-                          <h6>DWG</h6>
-                        </td>
-                        <td class="side-info-table-cell-33">
-                          <h5>2 : 0</h5>
-                        </td>
-                        <td class="side-info-table-cell-33">
-                          <img class="team-logo-img" src="img/t1_small.png">
-                          <h6>T1</h6>
-                        </td>
-                      </tr>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="schedule-table-title">
+                  <h5>수요일 3.31</h5>
+                </div>
+                <div class="schedule-table">  
+                  <div class="schedule-table-element">
+                    <span class="schedule-table-team-name text-right">DWG</span>
+                    <span>
+                      <img src="img/dwg_small.png">
+                    </span>
+                    <span class="schedule-table-time">17:00</span>
+                    <span><img src="img/t1_small.png"></span>
+                    <span class="schedule-table-team-name text-left">T1</span>
+                  </div>
+                  <div class="schedule-table-element">
+                    <span class="schedule-table-team-name text-right">DWG</span>
+                    <span>
+                      <img src="img/dwg_small.png">
+                    </span>
+                    <span class="schedule-table-time">17:00</span>
+                    <span><img src="img/t1_small.png"></span>
+                    <span class="schedule-table-team-name text-left">T1</span>
+                  </div>
+                </div>
+                
+                <div class="schedule-table-title">
+                  <h5>지난 경기</h5>
+                </div>
+                <div class="schedule-table">  
+                  <div class="schedule-table-element">
+                    <span class="schedule-table-team-name text-right">DWG</span>
+                    <span>
+                      <img src="img/dwg_small.png">
+                    </span>
+                    <span class="schedule-table-result">2 : 0</span>
+                    <span><img src="img/t1_small.png"></span>
+                    <span class="schedule-table-team-name text-left">T1</span>
+                  </div>
+                  <div class="schedule-table-element">
+                    <span class="schedule-table-team-name text-right">DWG</span>
+                    <span>
+                      <img src="img/dwg_small.png">
+                    </span>
+                    <span class="schedule-table-result">2 : 0</span>
+                    <span><img src="img/t1_small.png"></span>
+                    <span class="schedule-table-team-name text-left">T1</span>
+                  </div>
+                </div>
                 <button class="side-info-bar-more-btn">더보기</button>
               </div>
             </div>
@@ -125,44 +117,50 @@
 
         <div class="content-wrapper w100">
           <div class="of-the-week w70">
-            <div class="best-of-week shadow  card-background">
-              <div class="of-the-week-head">
+            <div class="best-of-week">
+              
+              <div class="of-the-week-wrapper shadow">
                 <div class="of-the-week-title-wrapper">
-                  <h4>Player of the Week</h4>
+                  <div class="of-the-week-title">
+                    <span class="of-the-week-color-span">Player<br></span>
+                    <span class="of-the-week-unimportant-span">of the</span>
+                    <span class="of-the-week-color-span">Week</span>
+                  </div>
+                  <div class="of-the-week-img-wrapper">
+                    <img class = "of-the-week-img" src="img/chovy.png">
+                  </div>
+                  <div class="of-the-week-desc">
+                    <span class="of-the-week-unimportant-span">MID<br></span>
+                    <span class="of-the-week-color-span">Chovy<br></span>
+                    <span class="of-the-week-unimportant-span-small">한화 생명 eSports</span>
+                  </div>
+                </div>
+                <div class="of-the-week-content">
                   <ul>
-                    <li>한화 생명 eSports</li>
-                    <li>MID</li>
-                    <li>Chovy</li>
+                    <li class="flex-table-cell">
+                      <div class="flex-table-cell-title">KDA<br><br></div>
+                      <div>2.0</div>
+                    </li>
+                    <li class="flex-table-cell">
+                      <div class="flex-table-cell-title">분당 데미지<br>(DPM)</div>
+                      <div>490</div>
+                    </li>
+                    <li class="flex-table-cell">
+                      <div class="flex-table-cell-title">팀 내 데미지 비중<br>(DMG)</div>
+                      <div>25.5%</div>
+                    </li>
+                    <li class="flex-table-cell">
+                      <div class="flex-table-cell-title">킬 관여율<br>(KP)</div>
+                      <div>57.5%</div>
+                    </li>
+                    <li class="flex-table-cell">
+                      <div class="flex-table-cell-title">15분 골드 차이<br>(GD 15)</div>
+                      <div>+362</div>
+                    </li>
                   </ul>
                 </div>
-                <div class="of-the-week-img-wrapper">
-                  <img src="img/chovy.png">
-                </div>
               </div>
-              <div class="of-the-week-content">
-                <ul>
-                  <li class="flex-table-cell">
-                    <div class="flex-table-cell-title">KDA</div>
-                    <div>2.0</div>
-                  </li>
-                  <li class="flex-table-cell">
-                    <div class="flex-table-cell-title">분당 데미지(DPM)</div>
-                    <div>490</div>
-                  </li>
-                  <li class="flex-table-cell">
-                    <div class="flex-table-cell-title">팀 내 데미지 비중(DMG)</div>
-                    <div>25.5%</div>
-                  </li>
-                  <li class="flex-table-cell">
-                    <div class="flex-table-cell-title">킬 관여율(KP)</div>
-                    <div>57.5%</div>
-                  </li>
-                  <li class="flex-table-cell">
-                    <div class="flex-table-cell-title">15분 골드 차이(GD 15)</div>
-                    <div>+362</div>
-                  </li>
-                </ul>
-              </div>
+              
             </div>
             <div class="best-of-week shadow">
               <div class="of-the-week-head">
@@ -172,7 +170,6 @@
                 <ul>
                   <li class="flex-table-cell">
                     <div>
-                      <img src="img/chovy.png">
                     </div>
                     <div class="card-background">
                       <h5>Chovy</h5>
@@ -202,26 +199,29 @@
             </div>
           </div>
 
-          <div class="side-info-bar w30">
-            <div class="side-content-wrapper shadow">
+          <div class="side-info w30">
+            <div class="point-bar"> </div>
+            <div class="side-content-wrapper h100 shadow">
               <div class="side-info-title">
-                <h5 class="side-info-title">현재 순위</h5>
+                <h5>현재 순위</h5>
               </div>
               <div class="side-info-body">
                 <table>
                   <thead>
                     <tr>
-                      <th scope="col">순위</th>
-                      <th scope="col">팀</th>
-                      <th scope="col">승</th>
-                      <th scope="col">패</th>
-                      <th scope="col">득실</th>
+                      <th>순위</th>
+                      <th>팀</th>
+                      <th>승</th>
+                      <th>패</th>
+                      <th>득실</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>1</td>
-                      <td>DWG KIA</td>
+                      <td class="standing-pos">1</td>
+                      <td class="standing-team">
+                        <img class="team-badge-logo" src="img/dwg_small.png">DWG
+                      </td>
                       <td>18</td>
                       <td>2</td>
                       <td>+20</td>
