@@ -1,46 +1,141 @@
 import './App.css';
 import { Component } from 'react';
-import Toc from './components/Toc'
-import ReadContent from './components/ReadContent'
-import CreateContent from './components/CreateContent'
-import UpdateContent from './components/UpdateContent'
 import MatchSchedule from './components/MatchSchedule'
-
+import MainEvent from './components/MainEvent'
+import WeekMvp from './components/best-of-Week/WeekMvp'
+import WeekPlayer from './components/best-of-Week/WeekPlayer'
+import WeekChamp from './components/best-of-Week/WeekChamp'
+import Standing from './components/Standing'
 
 class App extends Component{
   constructor(props){
     super(props);
-    this.max_content_id = 2;
     this.state = {
-      mode: 'create',
-      select_content_id:2,
-      subject : {title: 'web', sub: 'world wide web'},
-      welcome: {title:'Welcome', desc: 'hello hello'},
-      contents : [
-        {id:0 , title:'html', desc:'is hyper'},
-        {id:1 , title:'bulbak css', desc:'is style'},
-        {id:2 , title:'js', desc:'is script'}
+      main_event: [
+        {
+          title: "Week 10", eventDate: "수요일 3월 31일", subTitle: "DWG KIA vs T1", blueImg: "img/dwg.png", redImg: "img/t1.png"
+        }
       ],
-
       match_schedule : [
         {
-          title: "3.31 수",
+          title: "수요일 3.31",
           matches: [
-            {blue: "DWG", red: "T1", result: "17:00"},
-            {blue: "DWG", red: "T1", result: "20:00"},
+            {blue: "DWG", red: "T1", result: "17:00", blueImg: "img/dwg_small.png", redImg: "img/t1_small.png"},
+            {blue: "HLE", red: "T1", result: "20:00", blueImg: "img/dwg_small.png", redImg: "img/t1_small.png"},
           ]
         }
+      ],
+      finished_schedule:[
+        {
+          title: "지난 경기",
+          matches: [
+            {blue: "DWG", red: "T1", result: "2 : 0", blueImg: "img/dwg_small.png", redImg: "img/t1_small.png"},
+            {blue: "HLE", red: "T1", result: "2 : 0", blueImg: "img/dwg_small.png", redImg: "img/t1_small.png"},
+          ]
+        }
+      ],
+      week_mvp: {
+        player: {
+          summonerName: "Chovy",
+          teamName: "한화 생명 eSports",
+          role: "MID",
+          roleIcon: "img/mid-icon.png",
+          playerImgUrl: "img/chovy.png"
+        },
+        stats: [
+          {title: "KDA", value: "2.0"},
+          {title: "분당 데미지 (DPM)", value: "490"},
+          {title: "팀 내 데미지 비중 (DMG)", value: "25.5%"},
+          {title: "킬 관여율 (KP)", value: "57.5%"},
+          {title: "15분 골드 차이 (GD 15)", value: "+362"}
+        ]
+      },
+      week_player: [
+        {summonerName: "Chovy", teamName: "HLE", role: "MID", roleIcon:"img/mid-icon.png", playerImg: "img/chovy.png"},
+        {summonerName: "Chovy", teamName: "HLE", role: "MID", roleIcon:"img/mid-icon.png", playerImg: "img/chovy.png"},
+        {summonerName: "Chovy", teamName: "HLE", role: "MID", roleIcon:"img/mid-icon.png", playerImg: "img/chovy.png"},
+        {summonerName: "Chovy", teamName: "HLE", role: "MID", roleIcon:"img/mid-icon.png", playerImg: "img/chovy.png"},
+        {summonerName: "Chovy", teamName: "HLE", role: "MID", roleIcon:"img/mid-icon.png", playerImg: "img/chovy.png"}
+      ],
+      week_champs: [
+        {
+          champName: "나르", champRole: "TOP", champRoleIcon: "img/mid-icon.png", champImg: "img/gnar.jpeg",
+          champStats: [
+            {title: "PICK", value: "49.8%"},
+            {title: "BAN", value: "33.4%"},
+            {title: "WIN", value: "52.1%"}
+          ]
+        },
+        {
+          champName: "나르", champRole: "TOP", champRoleIcon: "img/mid-icon.png", champImg: "img/gnar.jpeg",
+          champStats: [
+            {title: "PICK", value: "49.8%"},
+            {title: "BAN", value: "33.4%"},
+            {title: "WIN", value: "52.1%"}
+          ]
+        },
+        {
+          champName: "나르", champRole: "TOP", champRoleIcon: "img/mid-icon.png", champImg: "img/gnar.jpeg",
+          champStats: [
+            {title: "PICK", value: "49.8%"},
+            {title: "BAN", value: "33.4%"},
+            {title: "WIN", value: "52.1%"}
+          ]
+        },
+        {
+          champName: "나르", champRole: "TOP", champRoleIcon: "img/mid-icon.png", champImg: "img/gnar.jpeg",
+          champStats: [
+            {title: "PICK", value: "49.8%"},
+            {title: "BAN", value: "33.4%"},
+            {title: "WIN", value: "52.1%"}
+          ]
+        },
+        {
+          champName: "나르", champRole: "TOP", champRoleIcon: "img/mid-icon.png", champImg: "img/gnar.jpeg",
+          champStats: [
+            {title: "PICK", value: "49.8%"},
+            {title: "BAN", value: "33.4%"},
+            {title: "WIN", value: "52.1%"}
+          ]
+        }
+      ],
+      standing: [
+        {pos: "1", teamName: "DWG", teamIcon: "img/dwg_small.png", win: 18, lost: 2, point: "+20"},
+        {pos: "1", teamName: "DWG", teamIcon: "img/dwg_small.png", win: 18, lost: 2, point: "+20"},
+        {pos: "1", teamName: "DWG", teamIcon: "img/dwg_small.png", win: 18, lost: 2, point: "+20"},
+        {pos: "1", teamName: "DWG", teamIcon: "img/dwg_small.png", win: 18, lost: 2, point: "+20"},
+        {pos: "1", teamName: "DWG", teamIcon: "img/dwg_small.png", win: 18, lost: 2, point: "+20"},
+        {pos: "1", teamName: "DWG", teamIcon: "img/dwg_small.png", win: 18, lost: 2, point: "+20"},
+        {pos: "1", teamName: "DWG", teamIcon: "img/dwg_small.png", win: 18, lost: 2, point: "+20"},
+        {pos: "1", teamName: "DWG", teamIcon: "img/dwg_small.png", win: 18, lost: 2, point: "+20"},
+        {pos: "1", teamName: "DWG", teamIcon: "img/dwg_small.png", win: 18, lost: 2, point: "+20"},
+        {pos: "1", teamName: "DWG", teamIcon: "img/dwg_small.png", win: 18, lost: 2, point: "+20"},
       ]
     }
-  }
-  create(){
-      this.state.contents.push({id: this.state.contents.length+1, title: 'jake', desc: 'add'});
   }
 
   render(){
     return (
       <div className="App">
-        <MatchSchedule match_schedule={this.state.match_schedule}></MatchSchedule>
+        <div class="content-wrapper w100">
+          <MainEvent
+            mainTopic={this.state.main_event}
+          ></MainEvent>
+          <MatchSchedule
+            matchSchedule={this.state.match_schedule}
+            finishedSchedule={this.state.finished_schedule}
+          ></MatchSchedule>
+        </div>
+        <div class="content-wrapper w100">
+          <div class="of-the-week w70">
+            <WeekMvp weekMvpInfo={this.state.week_mvp}></WeekMvp>
+            <WeekPlayer weekPlayerInfo={this.state.week_player}></WeekPlayer>
+            <WeekChamp weekChampInfo={this.state.week_champs}></WeekChamp>
+          </div>
+          <div class="side-info w30">
+            <Standing standing={this.state.standing}></Standing>
+          </div>
+        </div>
       </div>
     );
   }
