@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import axios from 'axios';
 
 function MainEvent(props){
   let mainTopic = props.mainTopic;
-
+  let m = getEvents();
   return(
     <div class="main-topic-wrapper w70">
       <div class="topic-desc">
@@ -20,5 +21,18 @@ function MainEvent(props){
       </div>
     </div>
   );
+}
+function getEvents(){
+  axios.get('http://localhost:8080/standing', {
+    params: {
+      tournamentId: "105522984810490982"
+    }
+  }).then(function (response){
+    console.log("hello")
+    console.log(response)
+  }).catch(function (error){
+    console.log(error)
+  });
+  return "";
 }
 export default MainEvent
