@@ -1,7 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios';
 
 function Standing(props){
-  let teamInfos = props.standing;
+  const [standInfo, setStandInfo] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchStanding = async () => {
+      try {
+        setError(null);
+        setStandInfo(null);
+        setLoading(true);
+
+        const response = await axios.get(
+          '/standing', {
+            params: {
+              'tournamentId': '105522984810490982'
+            }
+          }
+        );
+        setStandInfo(response.data);
+      }catch(e){
+        setError(e);
+      }
+    }
+    fetchStanding();
+  }, []);
+  
+  if(error) console.log(error);
+  if(!standInfo) return null;
 
   return(
     <div class="side-info-wrapper">
@@ -23,7 +51,9 @@ function Standing(props){
           </tr>
         </thead>
         <tbody>
-          {getTeamList(teamInfos)}
+          {standInfo.teamStandings.map(teamInfo => (
+            <StandingTeam teamInfo={teamInfo} key={teamInfo.teamId}></StandingTeam>)
+          )}
         </tbody>
       </table>
     </div>
@@ -31,23 +61,19 @@ function Standing(props){
   );
 }
 
-function getTeamList(teamInfos){
-  let teamList = []
-  for(var i=0; i < teamInfos.length; i++){
-    teamList.push(
-      <tr>
-        <td class="standing-pos">{teamInfos[i].pos}</td>
-        <td class="standing-team">
-          <img class="team-badge-logo" src={teamInfos[i].teamIcon}/>
-          <span>{teamInfos[i].teamName}</span>
-        </td>
-        <td>{teamInfos[i].win}</td>
-        <td>{teamInfos[i].lost}</td>
-        <td>{teamInfos[i].point}</td>
-      </tr>
-    );
-  }
-  return teamList
-}
+function StandingTeam({teamInfo}){
+  return (
+    <tr>
+      <td class="standing-pos">{teamInfo.rank}</td>
+      <td class="standing-team">
+        <img class="team-badge-logo" src={teamInfo.teamIcon}/>
+        <span>{teamInfo.teamCode}</span>
+      </td>
+      <td>{teamInfo.matchWin}</td>
+      <td>{teamInfo.matchLoss}</td>
+      <td>{teamInfo.points}</td>
+    </tr>
+  );
 
+}
 export default Standing;
