@@ -1,0 +1,9 @@
+.match-list-item{
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+}
+.match-team-box-score{
+    width: 40%;
+    border-right: 1px solid #e7e7e7;
+}
