@@ -1,9 +1,168 @@
+.match-content{
+  width: 100%;
+  padding: 2rem 3rem;
+}
+
+.match-date-picker-wrapper{
+  padding: 0 1rem;
+  display: flex;
+  height: 5.8rem;
+  margin: 1rem 0;
+  align-items: center;
+}
+.match-date-picker-wrapper button{
+  border: 0;
+  background-color: transparent;
+  height: 100%;
+}
+.match-month-pick-btn{
+  width: 20%;
+}
+.match-month-pick-btn span{
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.match-date-pick-wrapper{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.match-date-move-btn {
+  padding: 0 1.5rem;  
+}
+.match-date-pick-btn {
+  width: 3rem;
+}
+.match-date-pick-btn span{
+  display: block;
+  padding-top: 0.4rem;
+}
+.match-date-pick-weekday{
+  font-size: 1rem;
+}
+.match-date-pick-date{
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.match-schedule-content ul{
+  padding: 0;
+}
+.match-schedule-content-li{
+  margin: 2rem 0;
+}
 .match-list-item{
-    padding: 1rem;
-    width: 100%;
-    display: flex;
+  width: 100%;
+  display: flex;
 }
-.match-team-box-score{
-    width: 40%;
-    border-right: 1px solid #e7e7e7;
+
+.match-summary{
+  width: 40%;
 }
+.match-box-score{
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.match-box-score-team{
+  align-items: center;
+  margin: 0 2rem;
+}
+.match-box-score-team-img{
+  max-height: 5rem;
+}
+.match-box-score-team-rank{
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  align-items: center;
+}
+.match-box-score-team-rank span{
+  display: block;
+}
+.match-box-score-result{
+  text-align: center;
+  font-weight: 600;
+  font-size: 2rem;
+}
+.match-btn-wrapper{
+  margin-top: 0.8rem;
+  border-top: 1px solid #e7e7e7;
+}
+.match-summary-btn{
+  width: 50%;
+  padding: 1rem;
+  background-color: transparent;
+  border-width: 0;
+  justify-content: center;
+}
+.right-border-grey{
+  border-right: 1px solid #e7e7e7;
+}
+
+.match-detail{
+  padding: 0 1rem;
+  width: 60%;
+}
+.match-key-player-wrapper h5{
+  padding-top: 1rem;
+  margin: 0;
+}
+.match-key-player{
+  width: 100%;
+}
+.match-key-player-stats-title{
+  text-align: center;
+  padding: 0.3rem 0;
+  font-size: 0.8rem;
+}
+.match-key-player-stats td{
+  padding-bottom: 0.8rem;
+}
+
+.match-key-player-img-wrapper{
+  width: 3rem;
+  height: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #e7e7e7;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+.match-key-player-profile {
+  text-align: center;
+}
+.match-key-player-img-wrapper img{
+  width: 4rem;
+  margin-left: -0.6rem;
+}
+.match-key-player-profile span{
+  display: block;
+  line-height: 1;
+}
+.match-key-player-name{
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.match-key-player-team{
+  font-size: 0.7rem;
+  color: #333;
+  font-weight: 500;
+}
+.match-key-player-stats-desc{
+  text-align: center;
+  font-size: 0.8rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.match-game-detail-ul{
+  margin: 0;
+  align-items: center;
+}
+.match-game-win-img{
+  width: 3rem;
+}
+

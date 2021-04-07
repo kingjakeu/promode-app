@@ -38,25 +38,26 @@ function Standing(props){
         <div class="side-info-title">
           <h5>현재 순위</h5>
         </div>
+          <div class="side-info-body">
+          <table>
+            <thead>
+              <tr>
+                <th>순위</th>
+                <th>팀</th>
+                <th>W</th>
+                <th>L</th>
+                <th>득실</th>
+              </tr>
+            </thead>
+            <tbody>
+              {standInfo.teamStandings.map(teamInfo => (
+                <StandingTeam teamInfo={teamInfo} key={teamInfo.teamId}></StandingTeam>)
+              )}
+            </tbody>
+          </table>
+        </div>
       </div>
-      <div class="side-info-body">
-      <table>
-        <thead>
-          <tr>
-            <th>순위</th>
-            <th>팀</th>
-            <th>W</th>
-            <th>L</th>
-            <th>득실</th>
-          </tr>
-        </thead>
-        <tbody>
-          {standInfo.teamStandings.map(teamInfo => (
-            <StandingTeam teamInfo={teamInfo} key={teamInfo.teamId}></StandingTeam>)
-          )}
-        </tbody>
-      </table>
-    </div>
+      
     </div>
   );
 }
