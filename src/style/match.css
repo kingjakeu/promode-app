@@ -158,11 +158,51 @@
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
 .match-game-detail-ul{
-  margin: 0;
-  align-items: center;
+
+  width: 100%;
+  height: 100%;
+  display: table;
 }
-.match-game-win-img{
+.match-game-detail-li{
+  display: table-row;
+}
+.blue-team-win{
+  background-color: #1a508b;
+  width: 5px;
+  height: 100%;
+}
+.match-game-detail{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 0.1rem 0;
+}
+.match-game-win-img-wrapper{
+}
+.match-game-team-img{
   width: 3rem;
 }
-
+.match-game-champ-wrapper {
+  margin: 0 1rem;
+}
+.match-game-champ-wrapper ul{
+  display: table;
+}
+.match-game-champ-wrapper li{
+  display: table-cell;
+  padding: 0 0.2rem;
+  text-align: center;
+}
+.match-game-champ-wrapper span{
+  display: block;
+  font-size: 0.8rem;
+}
+.match-game-result-wrapper{
+  display: flex;
+  align-items: center;
+}
+.match-game-result-wrapper span{
+  display: block;
+}

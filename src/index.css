@@ -533,6 +533,11 @@ ul {
   height: 5rem;
   border-radius: 9999px;
 }
+.champ-icon-small{
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+}
 .card-background{
   background: linear-gradient( 135deg, rgb(248,235,161), rgb(211,191,113) );
 }

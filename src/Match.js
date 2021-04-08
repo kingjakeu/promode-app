@@ -5,7 +5,7 @@ function Match(){
     <div className="match-content">
       <div className="match-date-picker-wrapper shadow">
         <button className="match-month-pick-btn">
-          <span>4월</span>
+          <span>2021년 4월</span>
         </button>
         <DatePicker selectedDate={new Date()}/>
       </div>
@@ -48,14 +48,47 @@ function MatchGameList(){
 function MatchGameDetail(){
   return(
     <li className="match-game-detail-li">
-      <div>
-        <div>
-          <img className="match-game-win-img" src="img/dwg.png" alt="win team img"/>
+      <div className="match-game-detail">
+        <div className="blue-team-win"></div>
+        <div className="match-game-win-img-wrapper">
+          <img className="match-game-team-img" src="img/dwg.png" alt="win team img"/>
         </div>
+        <MatchGameChampList/>
+        <div className="match-game-result-wrapper">
+          <img className="match-game-team-img" src="img/dwg.png" alt="win team img"/>      
+          <span>23 - 10</span>
+          <img className="match-game-team-img" src="img/dwg.png" alt="win team img"/>      
+        </div>
+        <MatchGameChampList/>
       </div>
     </li>
   );
 }
+
+function MatchGameChampList(){
+  return(
+    <div className="match-game-champ-wrapper">
+      <ul>
+        <li> 
+          <img class = "champ-icon-small" src="./img/gnar.jpeg"/>
+        </li>
+        <li> 
+          <img class = "champ-icon-small" src="./img/gnar.jpeg"/>
+        </li>
+        <li> 
+          <img class = "champ-icon-small" src="./img/gnar.jpeg"/>
+        </li>
+        <li>
+          <img class = "champ-icon-small" src="./img/gnar.jpeg"/>
+        </li>
+        <li> 
+          <img class = "champ-icon-small" src="./img/gnar.jpeg"/>
+        </li>
+      </ul>
+    </div>
+  );
+}
+
 function KeyPlayer({KeyPlayerInfo}){
   return(
     <div className="match-key-player-wrapper">
