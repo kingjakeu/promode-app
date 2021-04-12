@@ -2,16 +2,19 @@ import React from 'react'
 import { Radar } from 'react-chartjs-2'
 function Player(){
   return(
-    <div className="player-content-wrapper">
-      <PlayerProfile/>
-      <PlayerStat/>
+    <div>
+      <div className="player-content-wrapper">
+        <PlayerProfile/>
+        <PlayerStat/>
+      </div>
+      <PlayerRecentGameList/>
     </div>
   );
 }
 function PlayerProfile(){
   return(
     <div className="player-profile-wrapper">
-      <h3>Casdasdasdasdhovy</h3>
+      <h3>Chovy</h3>
       <div className="player-profile-team-img-wrapper">
         <img src="./img/dwg_small.png" alt=""/>
         <span>DWG KIA</span>
@@ -102,6 +105,7 @@ function PlayerStatTable(){
     </div>
   );
 }
+
 function PlayerMostPicks(){
   return(
     <div className="player-most-pick shadow">
@@ -144,6 +148,7 @@ function PlayerMostPicks(){
     </div>
   );
 }
+
 function PlayerStatGraph(){
   const data = {
     labels: [
@@ -159,8 +164,8 @@ function PlayerStatGraph(){
       label: 'Chovy',
       data: [1,2,3,4,5,2,2],
       fill: true,
-      backgroundColor: 'rgba(255, 99, 132, 0.2)',
-      borderColor: 'rgb(255, 99, 132)',
+      backgroundColor: 'rgba(130, 231, 211, 0.2)',
+      borderColor: 'rgb(130, 231, 211)',
       pointBackgroundColor: 'rgb(255, 99, 132)',
       pointBorderColor: '#fff',
       pointRadius:0,
@@ -180,11 +185,14 @@ function PlayerStatGraph(){
     }]
   };
   const options = {
-    legend: {
-      display: 'false'
+    elements: {
+      line: {
+        borderWidth: 3
+      }
     },
-    scales:{
+    scale:{
       ticks: {
+        display: false,
         beginAtZero: true,
         max: 5,
         min: 0,
@@ -195,7 +203,6 @@ function PlayerStatGraph(){
 
   return(
     <div className="player-stat-graph-wrapper">
-      
       <Radar
         data={data}
         width={300}
@@ -205,4 +212,29 @@ function PlayerStatGraph(){
     </div>
   );
 }
+
+function PlayerRecentGameList(){
+  return(
+    <div className="recent-game-list-wrapper">
+      <h2>최근 경기</h2>
+      <ul>
+        <PlayerRecentGame/>
+      </ul>
+    </div>
+  );
+}
+
+function PlayerRecentGame(){
+  return(
+    <li className="game-result-win-bar shadow">
+        <div className="recent-game-result-title">
+          <img src="./img/t1_small.png" alt=""/>
+        </div>
+        <div className="player-game-champ-img-wrapper">
+          <img src="./img/gnar.jpeg" alt=""/>
+        </div>
+    </li>
+  );
+}
+
 export default Player;
