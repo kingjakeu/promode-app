@@ -1,0 +1,125 @@
+.player-content-wrapper{
+  width: 100%;
+  display: flex;
+  padding: 2rem 2rem;
+}
+.player-profile-wrapper{
+  width: 20%;
+  display: inline-block;
+}
+.player-profile-wrapper h3{
+  
+  margin: 0;
+  font-size: 2.8rem;
+  font-weight: 780;
+  line-height: 3rem;
+  word-wrap: break-word;
+}
+.player-profile-team-img-wrapper{
+  display: flex;
+  margin: 1rem 0;
+  align-items: center;
+}
+.player-profile-team-img-wrapper img{
+  width: 2rem;
+  margin-right: 0.5rem;
+}
+.player-profile-team-img-wrapper span{
+  font-size: 1rem;
+  font-weight: 600;
+  line-break: auto;
+}
+.player-profile-desc {
+  
+}
+.player-profile-desc span{
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 330;
+}
+.player-stat-wrapper{
+  display: flex;
+  width: 80%;
+}
+.player-stat-table-wrapper{
+  width: 65%;
+}
+.player-profile-img-pos{
+  text-align: right;
+}
+.player-profile-img-pos img{
+  width: 1.6rem;
+}
+.player-profile-img-play{
+  text-align: center;
+  margin-top: -1.6rem;
+}
+.player-profile-img-play img{
+  width: 10rem;
+}
+.minus-top-margin{
+  margin-top: -1rem;
+}
+.player-stat-table {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+}
+.player-stat-table-main{
+  width: 100%;
+  margin-right: 1rem;
+  border-collapse: collapse;
+}
+.player-stat-table-main td{
+  border: 1px solid #e7e7e7;
+}
+.player-stat-table-main td{
+  padding: 0.6rem;
+}
+.player-stat-table-sub{
+  width: 15rem;
+  border-collapse: collapse;
+}
+.player-stat-table-sub td{
+  padding: 0.6rem;
+  border: 1px solid #e7e7e7;
+}
+.player-most-pick {
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.player-most-pick h4{
+  margin: 0;
+}
+.player-most-pick-champ-list ul{
+  display: table;
+  width: 100%;
+  padding: 0;
+}
+.player-most-pick-champ-list li{
+  display: table-cell;
+}
+.player-most-pick-champ-wrapper{
+  text-align: center;
+}
+
+.player-most-pick-champ-img-wrapper{
+  width: 3rem;
+  height: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5rem;
+  border: 1px solid #e7e7e7;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+.player-most-pick-champ-img-wrapper img{
+  width: 3rem;
+}
+.player-most-pick-champ-wrapper span{
+  display: block;
+  font-size: 0.9rem;
+}
+.player-stat-graph-wrapper{
+  padding: 1rem;
+}
