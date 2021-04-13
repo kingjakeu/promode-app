@@ -1,0 +1,72 @@
+.list-content-wrapper{
+  padding: 1rem;
+}
+.list-content-wrapper ul li{
+  display: inline;
+}
+.list-content-wrapper ul{
+  padding: 0;
+}
+.list-content-wrapper li{
+  border-radius: 10px 10px 0 0;
+  margin-right: 5px;
+  padding: 0.5rem 1.5rem;
+}
+.list-tab-selected{
+  background-color: #fff;
+  border-bottom: 5px solid #82E7D3;
+}
+.list-tab-unselected{
+  background-color: #fff;
+  border-bottom: 5px solid #eee;
+}
+
+.list-wrapper{
+  width: 100%;
+  border-spacing: 0px;
+  padding: 1rem 0rem;
+}
+.list-item-title{
+  padding: 0.5rem 1rem;
+  background-color: rgb(248, 248, 248);
+}
+.list-item-content{
+  padding: 0.8rem 1rem;
+  border-bottom: 2px solid #eee;
+}
+.list-item-content h4{
+  margin: 0;
+}
+.list-item-team{
+  display: flex;
+  align-items: center;
+}
+.list-item-team img{
+  width: 3rem;
+}
+.list-item-team span{
+  font-size: 1rem;
+  font-weight: 400;
+}
+.list-item-player{
+  display: flex;
+  align-items: center;
+}
+.list-item-player span{
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.list-item-player img{
+  width: 3rem;
+}
+.list-item-pos{
+  display: flex;
+  align-items: center;
+}
+.list-item-pos img{
+  width: 1.5rem;
+}
+.list-item-pos span{
+  display: block;
+  font-size: 1rem;
+}
