@@ -51,13 +51,13 @@ function MatchGameDetail(){
       <div className="match-game-detail">
         <div className="blue-team-win"></div>
         <div className="match-game-win-img-wrapper">
-          <img className="match-game-team-img" src="img/dwg.png" alt="win team img"/>
+          <img className="match-game-team-img" src="img/icon/team/dwg-kia.png" alt="win team img"/>
         </div>
         <MatchGameChampList/>
         <div className="match-game-result-wrapper">
-          <img className="match-game-team-img" src="img/dwg.png" alt="win team img"/>      
+          <img className="match-game-team-img" src="img/icon/team/dwg-kia.png" alt="win team img"/>      
           <span>23 - 10</span>
-          <img className="match-game-team-img" src="img/dwg.png" alt="win team img"/>      
+          <img className="match-game-team-img" src="img/icon/team/dwg-kia.png" alt="win team img"/>      
         </div>
         <MatchGameChampList/>
       </div>
@@ -147,7 +147,7 @@ function MatchSummary(){
     <div className="match-summary right-border-grey">
       <div className="match-box-score">
         <div className="match-box-score-team">
-          <img className="match-box-score-team-img" src="/img/dwg.png" alt="team icon"/>
+          <img className="match-box-score-team-img" src="/img/icon/team/dwg-kia.png" alt="team icon"/>
           <div className="match-box-score-team-rank">
             <span>DWG</span>
             <span>10-4</span>

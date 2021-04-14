@@ -67,7 +67,7 @@ function Player(){
       </td>
       <td className="list-item-content">
         <div className="list-item-team">
-          <img src="./img/dwg_small.png" alt=""/>
+          <img src="./img/icon/team/dwg-kia.png" alt=""/>
           <span>DWG</span>
         </div>
       </td>

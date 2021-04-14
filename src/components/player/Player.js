@@ -16,7 +16,7 @@ function PlayerProfile(){
     <div className="player-profile-wrapper">
       <h3>Chovy</h3>
       <div className="player-profile-team-img-wrapper">
-        <img src="./img/dwg_small.png" alt=""/>
+        <img src="./img/icon/team/dwg-kia.png" alt=""/>
         <span>DWG KIA</span>
       </div>
       <div className="player-profile-desc ">

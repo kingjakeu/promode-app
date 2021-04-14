@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import {getTeamIcon} from '../../util/IconFinder.js';
 
 function TeamList(){
   return(
@@ -20,7 +21,6 @@ function TeamList(){
           <tbody>
             <Team/>
             <Team/>
-            
           </tbody>
         </table>
       </div>
@@ -36,7 +36,7 @@ function Team(){
       </td>
       <td className="list-item-content">
         <div className="list-item-team">
-          <img src="./img/dwg_small.png" alt=""/>
+          <img src={getTeamIcon("dwg-kia")} alt=""/>
           <span>DWG</span>
         </div>
       </td>

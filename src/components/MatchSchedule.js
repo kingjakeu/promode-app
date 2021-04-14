@@ -15,7 +15,7 @@ function MatchSchedule(props){
             {getMatchSchedule(props.finishedSchedule, finishedStyle)}
           
           <div className="schedule-table">
-            <a href="/match"><span>더 보기</span></a>
+            <a href="/match">더 보기</a>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+import {getTeamIcon} from '../util/IconFinder.js';
 
 function Standing(props){
   const [standInfo, setStandInfo] = useState(null);
@@ -63,16 +64,17 @@ function Standing(props){
 }
 
 function StandingTeam({teamInfo}){
+  var gamePoint = teamInfo.gameWin - teamInfo.gameLoss;
   return (
     <tr>
       <td class="standing-pos">{teamInfo.rank}</td>
       <td class="standing-team">
-        <img class="team-badge-logo" src={teamInfo.teamIcon}/>
+        <img class="team-badge-logo" src={getTeamIcon(teamInfo.teamSlug)}/>
         <span>{teamInfo.teamCode}</span>
       </td>
       <td>{teamInfo.matchWin}</td>
       <td>{teamInfo.matchLoss}</td>
-      <td>{teamInfo.points}</td>
+      <td>{(gamePoint <= 0 ? "" : "+")+gamePoint}</td>
     </tr>
   );
 

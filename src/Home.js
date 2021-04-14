@@ -17,8 +17,8 @@ function Home(){
     {
       title: "수요일 3.31",
       matches: [
-        {blue: "DWG", red: "T1", result: "17:00", blueImg: "img/dwg_small.png", redImg: "img/t1_small.png"},
-        {blue: "HLE", red: "T1", result: "20:00", blueImg: "img/dwg_small.png", redImg: "img/t1_small.png"},
+        {blue: "DWG", red: "T1", result: "17:00", blueImg: "img/icon/team/dwg-kia.png", redImg: "img/t1_small.png"},
+        {blue: "HLE", red: "T1", result: "20:00", blueImg: "img/icon/team/dwg-kia.png", redImg: "img/t1_small.png"},
       ]
     }
   ]);
@@ -26,8 +26,8 @@ function Home(){
     {
       title: "지난 경기",
       matches: [
-        {blue: "DWG", red: "T1", result: "2 : 0", blueImg: "img/dwg_small.png", redImg: "img/t1_small.png"},
-        {blue: "HLE", red: "T1", result: "2 : 0", blueImg: "img/dwg_small.png", redImg: "img/t1_small.png"},
+        {blue: "DWG", red: "T1", result: "2 : 0", blueImg: "img/icon/team/dwg-kia.png", redImg: "img/t1_small.png"},
+        {blue: "HLE", red: "T1", result: "2 : 0", blueImg: "img/icon/team/dwg-kia.png", redImg: "img/t1_small.png"},
       ]
     }
   ]);
@@ -97,16 +97,16 @@ function Home(){
     }
   ]);
   const[standing, setStanding] = useState([
-    {pos: "1", teamName: "DWG", teamIcon: "img/dwg_small.png", win: 18, lost: 2, point: "+20"},
-    {pos: "1", teamName: "DWG", teamIcon: "img/dwg_small.png", win: 18, lost: 2, point: "+20"},
-    {pos: "1", teamName: "DWG", teamIcon: "img/dwg_small.png", win: 18, lost: 2, point: "+20"},
-    {pos: "1", teamName: "DWG", teamIcon: "img/dwg_small.png", win: 18, lost: 2, point: "+20"},
-    {pos: "1", teamName: "DWG", teamIcon: "img/dwg_small.png", win: 18, lost: 2, point: "+20"},
-    {pos: "1", teamName: "DWG", teamIcon: "img/dwg_small.png", win: 18, lost: 2, point: "+20"},
-    {pos: "1", teamName: "DWG", teamIcon: "img/dwg_small.png", win: 18, lost: 2, point: "+20"},
-    {pos: "1", teamName: "DWG", teamIcon: "img/dwg_small.png", win: 18, lost: 2, point: "+20"},
-    {pos: "1", teamName: "DWG", teamIcon: "img/dwg_small.png", win: 18, lost: 2, point: "+20"},
-    {pos: "1", teamName: "DWG", teamIcon: "img/dwg_small.png", win: 18, lost: 2, point: "+20"},
+    {pos: "1", teamName: "DWG", teamIcon: "img/icon/team/dwg-kia.png", win: 18, lost: 2, point: "+20"},
+    {pos: "1", teamName: "DWG", teamIcon: "img/icon/team/dwg-kia.png", win: 18, lost: 2, point: "+20"},
+    {pos: "1", teamName: "DWG", teamIcon: "img/icon/team/dwg-kia.png", win: 18, lost: 2, point: "+20"},
+    {pos: "1", teamName: "DWG", teamIcon: "img/icon/team/dwg-kia.png", win: 18, lost: 2, point: "+20"},
+    {pos: "1", teamName: "DWG", teamIcon: "img/icon/team/dwg-kia.png", win: 18, lost: 2, point: "+20"},
+    {pos: "1", teamName: "DWG", teamIcon: "img/icon/team/dwg-kia.png", win: 18, lost: 2, point: "+20"},
+    {pos: "1", teamName: "DWG", teamIcon: "img/icon/team/dwg-kia.png", win: 18, lost: 2, point: "+20"},
+    {pos: "1", teamName: "DWG", teamIcon: "img/icon/team/dwg-kia.png", win: 18, lost: 2, point: "+20"},
+    {pos: "1", teamName: "DWG", teamIcon: "img/icon/team/dwg-kia.png", win: 18, lost: 2, point: "+20"},
+    {pos: "1", teamName: "DWG", teamIcon: "img/icon/team/dwg-kia.png", win: 18, lost: 2, point: "+20"},
   ]);
   return(
     <div className="App">
