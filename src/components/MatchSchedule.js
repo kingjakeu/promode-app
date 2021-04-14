@@ -8,12 +8,16 @@ function MatchSchedule(props){
       <div className="side-info-wrapper">
         <div className="point-bar"> </div>
         <div className="side-content-wrapper h100 shadow"> 
-        <div className="side-info-title">
-          <h5>경기 일정</h5>
+          <div className="side-info-title">
+            <h5>경기 일정</h5>
+          </div>
+            {getMatchSchedule(props.matchSchedule, upcommingStyle)}
+            {getMatchSchedule(props.finishedSchedule, finishedStyle)}
+          
+          <div className="schedule-table">
+            <a href="/match"><span>더 보기</span></a>
+          </div>
         </div>
-        {getMatchSchedule(props.matchSchedule, upcommingStyle)}
-        {getMatchSchedule(props.finishedSchedule, finishedStyle)}
-      </div>
       </div>
     </div>
   );

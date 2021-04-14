@@ -34,6 +34,11 @@
   padding: 0.8rem 1rem;
   border-bottom: 2px solid #eee;
 }
+.list-item-content-stat{
+  max-width: 4rem;
+
+  text-align: center;
+}
 .list-item-content h4{
   margin: 0;
 }
