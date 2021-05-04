@@ -1,7 +1,37 @@
-import React from 'react';
-import {getTeamIcon} from '../../util/IconFinder.js';
+import React, { useEffect, useState } from 'react'
+import axios from 'axios';
 
 function TeamList(){
+
+  const [teamInfoList, setTeamInfoList] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] =  useState(null);
+
+  useEffect(() => {
+    const fetchTeamInfoList = async () => {
+      try{
+        setError(null);
+        setTeamInfoList(null);
+        setLoading(true);
+      
+        const response = await axios.get(
+          '/team', {
+            params : {
+              tournamentId : "105522984810490982"
+            }
+          }
+        );
+        setTeamInfoList(response.data);
+      } catch (e) {
+        setError(e);
+      }
+    }
+    fetchTeamInfoList();
+  }, []);
+
+  if(error) console.log(error);
+  if(!teamInfoList) return null;
+
   return(
     <div className="list-content-wrapper">
       <h1>LCK 2021 Split 1</h1>
@@ -19,8 +49,9 @@ function TeamList(){
             </tr>
           </thead>
           <tbody>
-            <Team/>
-            <Team/>
+            {teamInfoList.map(teamInfo => (
+              <Team teamInfo={teamInfo} key={teamInfo.id}/>
+            ))}
           </tbody>
         </table>
       </div>
@@ -28,32 +59,32 @@ function TeamList(){
   );
 }
 
-function Team(){
+function Team({teamInfo}){
   return(
     <tr>
       <td className="list-item-content list-item-content-stat">
-        <h4>1</h4>
+        <h4>{teamInfo.rank}</h4>
       </td>
       <td className="list-item-content">
         <div className="list-item-team">
-          <img src={getTeamIcon("dwg-kia")} alt=""/>
-          <span>DWG</span>
+          <img src={teamInfo.imgUrl} alt=""/>
+          <span>{teamInfo.code}</span>
         </div>
       </td>
       <td className="list-item-content list-item-content-stat">
-        <span>10</span>
+        <span>{teamInfo.totalMatch}</span>
       </td>
       <td className="list-item-content list-item-content-stat">
-        <span>8</span>
+        <span>{teamInfo.matchWin}</span>
       </td>
       <td className="list-item-content list-item-content-stat">
-        <span>2</span>
+        <span>{teamInfo.matchLoss}</span>
       </td>
       <td className="list-item-content list-item-content-stat">
-        <span>+10</span>
+        <span>{teamInfo.score}</span>
       </td>
       <td className="list-item-content list-item-content-stat">
-        <span>80.0%</span>
+        <span>{teamInfo.matchWinRate}%</span>
       </td>
     </tr>
   );

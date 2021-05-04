@@ -1,6 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios';
 
 function PlayerList(){
+
+  const [playerInfoList, setPlayerInfoList] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] =  useState(null);
+
+  useEffect(() => {
+    const fetchPlayerList = async () => {
+      try{
+        setError(null);
+        setPlayerInfoList(null);
+        setLoading(true);
+      
+        const response = await axios.get(
+          '/player/summary', {
+            // params : {}
+          }
+        );
+        setPlayerInfoList(response.data);
+      } catch (e) {
+        setError(e);
+      }
+    }
+    fetchPlayerList();
+  }, []);
+
+  if(error) console.log(error);
+  if(!playerInfoList) return null;
+
   return(
     <div className="list-content-wrapper">
 
@@ -44,8 +73,9 @@ function PlayerList(){
               </tr>
             </thead>
             <tbody>
-              <Player/>
-              <Player/>
+              {playerInfoList.map(playerInfo => (
+                <Player playerInfo={playerInfo} key={playerInfo.id}/>
+              ))}
             </tbody>
           </table>
         </div>
@@ -53,7 +83,7 @@ function PlayerList(){
   );
 }
 
-function Player(){
+function Player({playerInfo}){
   return(
     <tr>
       <td className="list-item-content list-item-content-stat">
@@ -62,7 +92,7 @@ function Player(){
       <td className="list-item-content">
         <div className="list-item-player">
           <img src="./img/chovy.png" alt=""/>
-          <span>Chovy</span>
+          <span>{playerInfo.summonerName}</span>
         </div>
       </td>
       <td className="list-item-content">
@@ -75,32 +105,32 @@ function Player(){
       <td className="list-item-content">
         <div className="list-item-pos">
           <img src="./img/mid-icon.png" alt=""/>
-          <span>MID</span>
+          <span>{playerInfo.role}</span>
         </div>
       </td>
       <td className="list-item-content list-item-content-stat">
-        <span>3.21</span>
+        <span>{playerInfo.kda}</span>
       </td>
       <td className="list-item-content list-item-content-stat">
-        <span>3.21</span>
+        <span>{playerInfo.kill}</span>
       </td>
       <td className="list-item-content list-item-content-stat">
-        <span>3.21</span>
+        <span>{playerInfo.death}</span>
       </td>
       <td className="list-item-content list-item-content-stat">
-        <span>3.21</span>
+        <span>{playerInfo.assist}</span>
       </td>
       <td className="list-item-content list-item-content-stat">
         <span>52%</span>
       </td>
       <td className="list-item-content list-item-content-stat">
-        <span>8</span>
+        <span>{playerInfo.win}</span>
       </td>
       <td className="list-item-content list-item-content-stat">
-        <span>2</span>
+        <span>{playerInfo.loss}</span>
       </td>
       <td className="list-item-content list-item-content-stat">
-        <span>80%</span>
+        <span>{playerInfo.winRate}%</span>
       </td>
     </tr>
   );

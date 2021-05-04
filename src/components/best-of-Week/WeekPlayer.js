@@ -1,6 +1,37 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios';
 
-function WeekPlayer(props){
+function WeekPlayerList(){
+  const [weekPlayerList, setWeekPlayerList] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] =  useState(null);
+
+  useEffect(() => {
+    const fetchWeekPlayerList = async () => {
+      try{
+        setError(null);
+        setWeekPlayerList(null);
+        setLoading(true);
+      
+        const response = await axios.get(
+          '/player/best', {
+            params : {
+              tournamentId : "105522984810490982",
+              weekBlock: "WEEK9"
+            }
+          }
+        );
+        setWeekPlayerList(response.data);
+      } catch (e) {
+        setError(e);
+      }
+    }
+    fetchWeekPlayerList();
+  }, []);
+
+  if(error) console.log(error);
+  if(!weekPlayerList) return null;
+
   return(
     <div class="best-of-week">
       <div class="of-the-week-wrapper shadow">
@@ -10,38 +41,34 @@ function WeekPlayer(props){
             <span class="of-the-week-unimportant-span"> of the Week</span>
           </h5>
         </div>
-        {getPlayerList(props.weekPlayerInfo)}
+        <div class="of-the-week-content">
+          <ul>
+            {weekPlayerList.map(playerInfo => (
+              <WeekPlayer playerInfo={playerInfo} key={playerInfo.id}/>
+              ))}
+          </ul>
+        </div>
       </div>
     </div>
-  );
+
+    
+  ); 
 }
 
-function getPlayerList(playerInfos){
-  let playerList = []
-  
-  for(var i=0; i < playerInfos.length; i++){
-    playerList.push(
-      <li class="flex-table-cell-no-border">
-        <div class="of-the-week-best-img-wrapper">
-          <img class = "of-the-week-best-img" src={playerInfos[i].playerImg}/>
-        </div>
-        <div class="point-bar-small"></div>
-        <div class="of-the-week-best-desc shadow">                    
-          <img class="pos-icon" src={playerInfos[i].roleIcon}/>
-          <div class="of-the-week-unimportant-span-small">{playerInfos[i].summonerName}</div>
-          <div class="of-the-week-unimportant-span-small">{playerInfos[i].teamName}</div>
-        </div>
-      </li>
-    );
-  }
-
+function WeekPlayer({playerInfo}){
   return(
-    <div class="of-the-week-content">
-      <ul>
-        {playerList}
-      </ul>
-    </div>
+    <li class="flex-table-cell-no-border">
+      <div class="of-the-week-best-img-wrapper">
+        <img class = "of-the-week-best-img"  src="./img/chovy.png" alt=""/>
+      </div>
+      <div class="point-bar-small"></div>
+      <div class="of-the-week-best-desc shadow">                    
+        <img class="pos-icon" src="./img/mid-icon.png" alt=""/>
+        <div class="of-the-week-unimportant-span-small">{playerInfo.summonerName}</div>
+        <div class="of-the-week-unimportant-span-small">{playerInfo.summonerName}</div>
+      </div>
+    </li>
   );
 }
 
-export default WeekPlayer;
+export default WeekPlayerList;
